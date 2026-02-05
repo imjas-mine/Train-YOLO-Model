@@ -1,0 +1,13 @@
+train: d:\Capstone\train\train\images
+val: d:\Capstone\train\valid\images
+test: d:\Capstone\train\test\images
+nc: 2
+names:
+- Bottle
+- Bottle cap
+roboflow:
+  workspace: capstone-yz1tt
+  project: bottle-30oik
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/capstone-yz1tt/bottle-30oik/dataset/1
