@@ -49,7 +49,7 @@ print("STEP 3: Running bottle detection...")
 print("=" * 60)
 
 # Confidence threshold (how sure the model should be)
-confidence = 0.1  # 25% minimum confidence
+confidence = 0.25  # 25% minimum confidence
 
 for img_file in image_files:
     img_path = os.path.join(test_images_dir, img_file)
