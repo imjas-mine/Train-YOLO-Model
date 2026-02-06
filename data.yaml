@@ -1,12 +1,13 @@
-train: train/images
-val: valid/images
-test: test/images
-nc: 1
-names:
-- Aulaf75
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Aulaf75', 'Mouse']
+
 roboflow:
   workspace: capstone-yz1tt
-  project: bottle-30oik
-  version: 1
+  project: mouse-6nfst
+  version: 2
   license: CC BY 4.0
-  url: https://universe.roboflow.com/capstone-yz1tt/bottle-30oik/dataset/1
+  url: https://universe.roboflow.com/capstone-yz1tt/mouse-6nfst/dataset/2
