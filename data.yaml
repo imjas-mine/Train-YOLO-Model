@@ -2,8 +2,8 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 2
-names: ['Aulaf75', 'Mouse']
+nc: 3
+names: ["Aulaf75", "Mouse", "ahkeyboard"]
 
 roboflow:
   workspace: capstone-yz1tt
