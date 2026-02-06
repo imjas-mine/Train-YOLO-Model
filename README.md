@@ -14,37 +14,21 @@ pip install ultralytics torch torchvision opencv-python matplotlib pyyaml numpy
 - Extract the zip file to this directory
 - Make sure you have: `train/`, `valid/`, `test/` folders and `data.yaml`
 
-**Important:** Need **100+ images minimum** for good results!
+**Important:** Need **30+ images minimum** for usable results!
 
-### 3. Update File Paths ⚠️
-**The scripts have hardcoded paths!** You need to change them:
-
-Open these files and update paths to match your directory:
-- `1_prepare_dataset.py` - Line 13: `base_dir = r"d:\Capstone\train"`
-- `train_yolo26.py` - Line 67: `data_yaml = r'd:\Capstone\train\data.yaml'`
-- `test_model.py` - Line 33: `test_images_dir = r'd:\Capstone\train\test\images'`
-
-**Change to YOUR project directory!**
-
-### 4. Split Dataset (if needed)
-If you only have a `train` folder:
-```bash
-python 1_prepare_dataset.py
-```
-
-### 5. Train
+### 3. Train
 ```bash
 python train_yolo26.py
 ```
 Training takes 10-60 minutes. Press ENTER when prompted at each step.
 
-### 6. Check Results
+### 4. Check Results
 After training, check: `runs/train/yolo26_bottle/`
 - `results.png` - Training performance graphs
 - `weights/best.pt` - Your trained model
 - `val_batch0_pred.jpg` - Sample predictions
 
-### 7. Test
+### 5. Test
 Put test images in `test/images/` folder, then:
 ```bash
 python test_model.py
@@ -53,19 +37,18 @@ Results saved to `test_results/`
 
 ## Common Issues
 
-**"No detections"** → Need more training data (100+ images)
+**"No detections"** → Need more training data (30+ images)
 
 **"Out of memory"** → Edit `train_yolo26.py`, change `batch_size = 16` to `batch_size = 8`
 
-**"File not found"** → Update hardcoded paths in the scripts!
-
 ## Files You'll Use
 
-- `1_prepare_dataset.py` - Split data into train/valid/test
 - `train_yolo26.py` - Main training script
 - `test_model.py` - Test your trained model
-- `data.yaml` - Dataset config (auto-generated)
+- `verify_model.py` - Debug script to check model detection
+- `use_pretrained.py` - Test with pretrained YOLO11 model
+- `data.yaml` - Dataset config
 
 ---
 
-**Need 100+ labeled images for good results!**
+**Need 30+ labeled images for usable results!**
