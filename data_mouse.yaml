@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Mouse']
+
+roboflow:
+  workspace: capstone-yz1tt
+  project: mouse-6nfst
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/capstone-yz1tt/mouse-6nfst/dataset/2
