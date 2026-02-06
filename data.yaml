@@ -1,6 +1,6 @@
-train: d:\Capstone\train\train\images
-val: d:\Capstone\train\valid\images
-test: d:\Capstone\train\test\images
+train: train/images
+val: valid/images
+test: test/images
 nc: 2
 names:
 - Bottle

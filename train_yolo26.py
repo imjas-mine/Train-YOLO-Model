@@ -65,7 +65,7 @@ print("STEP 4: Setting up training parameters...")
 print("=" * 60)
 
 # Dataset configuration
-data_yaml = r'd:\Capstone\train\data.yaml'
+data_yaml = 'data.yaml'
 
 # Training parameters
 epochs = 50           # Number of training cycles
@@ -99,7 +99,7 @@ results = model.train(
     imgsz=img_size,           # 320x320 image size
     patience=patience,        # Stop early if no improvement
     device=device,            # GPU or CPU
-    project=r'd:\Capstone\train\runs\train',  # Save location
+    project='runs/train',  # Save location
     name='yolo26_bottle',     # Run name
     
     # Learning rate parameters
@@ -125,7 +125,7 @@ print("STEP 6: Saving results...")
 print("=" * 60)
 
 # Results location
-results_dir = r'd:\Capstone\train\runs\train\yolo26_bottle'
+results_dir = 'runs/train/yolo26_bottle'
 best_model = os.path.join(results_dir, 'weights', 'best.pt')
 
 print(f"\n📊 Training results saved to:")

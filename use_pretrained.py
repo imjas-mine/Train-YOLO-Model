@@ -3,6 +3,7 @@ Use YOLO's pretrained model (already trained on 80 common objects including bott
 """
 
 from ultralytics import YOLO
+import os
 
 # Load pretrained YOLO model (trained on COCO dataset with 80 classes)
 print("Loading pretrained YOLO model...\n")
@@ -12,9 +13,7 @@ model = YOLO("yolo11n.pt")  # Pretrained on COCO dataset
 print("This model can detect 80 objects, including bottles!\n")
 
 # Test on your images
-import os
-
-test_dir = r"d:\Capstone\train\test\images"
+test_dir = "test/images"
 
 for img_file in os.listdir(test_dir):
     if img_file.lower().endswith((".jpg", ".png")):

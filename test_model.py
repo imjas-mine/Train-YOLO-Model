@@ -15,7 +15,7 @@ import os
 from PIL import Image
 
 # Load your trained model
-model_path = r'd:\Capstone\train\runs\train\yolo26_bottle\weights\best.pt'
+model_path = 'runs/train/yolo26_bottle/weights/best.pt'
 model = YOLO(model_path)
 
 print(f"✓ Model loaded from: {model_path}")
@@ -30,7 +30,7 @@ print("\n" + "=" * 60)
 print("STEP 2: Finding test images...")
 print("=" * 60)
 
-test_images_dir = r'd:\Capstone\train\test\images'
+test_images_dir = 'test/images'
 image_files = [f for f in os.listdir(test_images_dir) 
                if f.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp'))]
 
@@ -83,7 +83,7 @@ print("STEP 4: Saving detection results...")
 print("=" * 60)
 
 # Create output directory
-output_dir = r'd:\Capstone\train\test_results'
+output_dir = 'test_results'
 os.makedirs(output_dir, exist_ok=True)
 
 for img_file in image_files:
