@@ -12,10 +12,9 @@ print("=" * 60)
 
 from ultralytics import YOLO
 import os
-from PIL import Image
 
 # Load your trained model
-model_path = 'runs/train/yolo26_bottle/weights/best.pt'
+model_path = 'runs/detect/runs/train/yolo26_trained/weights/best.pt'
 model = YOLO(model_path)
 
 print(f"✓ Model loaded from: {model_path}")
@@ -45,7 +44,7 @@ input("\n👉 Press ENTER to run detection (Step 3)...")
 # STEP 3: Run Detection
 # ============================================
 print("\n" + "=" * 60)
-print("STEP 3: Running bottle detection...")
+print("STEP 3: Running object detection...")
 print("=" * 60)
 
 # Confidence threshold (how sure the model should be)
