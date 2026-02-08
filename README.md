@@ -58,6 +58,16 @@ uv run python test_model.py
 
 Results saved to `test_results/`
 
+### 7. Quantize for Android Deployment
+
+Convert the trained model to TFLite INT8 format optimized for Android phones:
+
+```bash
+uv run python quantization/quantize_tflite.py
+```
+
+This exports the model with INT8 quantization at 320x320 input size. The output TFLite file is saved to `quantization/output/`.
+
 ## Common Issues
 
 **"No detections"** - Need more training data (30+ images)
@@ -72,6 +82,7 @@ Results saved to `test_results/`
 - `test_model.py` - Test your trained model
 - `verify_model.py` - Debug script to check model detection
 - `use_pretrained.py` - Test with pretrained YOLO11 model
+- `quantization/quantize_tflite.py` - INT8 TFLite quantization for Android deployment
 - `data.yaml` - Dataset config
 - `pyproject.toml` - Project dependencies and uv configuration
 
