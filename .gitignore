@@ -40,6 +40,7 @@ workers/
 *.pt
 *.pth
 *.onnx
+*.tflite
 !yolo11n.pt
 !yolo26n.pt
 
@@ -49,6 +50,9 @@ workers/
 
 # OS specific
 Thumbs.db
+
+# Quantization output
+quantization/output/
 
 # Project specific
 PRETRAINED_*
