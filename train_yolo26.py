@@ -71,7 +71,7 @@ if __name__ == "__main__":
     epochs = 50  # Number of training cycles
     batch_size = 16  # Images per batch
     img_size = 640  # Image size (640x640 pixels)
-    patience = 10  # Stop if no improvement for 10 epochs
+    patience = 30  # Stop if no improvement for 30 epochs
 
     print(f"✓ Dataset: {data_yaml}")
     print(f"✓ Epochs: {epochs}")
